@@ -90,24 +90,33 @@ var upperCasedCharacters = [
 
 // Function to prompt user for password options
 function getPasswordOptions() {
-  let passwordLength; lowerCase; upperCase; numberCharacter; specialXter;
-  
+  let passwordLength, lowerCase, upperCase, numberCharacter, specialXter;
+
   // This section gets the User's password length
   do {
     passwordLength = prompt("Please provide the password length you want in numbers, between 8 and 128");
   }
-  while (passwordLength < 8 || passwordLength > 128 || isNaN(passwordLength));
-   
+  while (passwordLength < 8 || passwordLength > 128 || isNaN(passwordLength) || passwordLength != null);
 
-  console.log(passwordLength);
+  alert("You need to Click OK for at least one of the following options for 'Lowercase, Uppercase, Numeric or Special Characters' if you want them in your password");
 
-  // This section confirms if the User's wants a Lowercase character in password
+  do {
+    // This section confirms if the User's wants a Lowercase character in password
+    lowerCase = confirm("Confirm if you want a lowercase character in your passpord!\nClick OK or Cancel.");
 
-  // This section confirms if the User's wants a Uppercase character in password
+    // This section confirms if the User's wants a Uppercase character in password
+    upperCase = confirm("Confirm if you want an uppercase character in your passpord!\nClick OK or Cancel.");
 
-  // This section confirms if the User's wants a Numeric character in password
+    // This section confirms if the User's wants a Numeric character in password
+    numberCharacter = confirm("Confirm if you want a Numeric character in your passpord!\nClick OK or Cancel.");
   
-  // This section confirms if the User's wants a Special character in password
+    // This section confirms if the User's wants a Special character in password
+    specialXter = confirm("Confirm if you want a Special character in your passpord!\nClick OK or Cancel.");
+  }
+  while (lowerCase === false && upperCase === false && numberCharacter === false && specialXter === false);
+
+
+  console.log(passwordLength, lowerCase, upperCase, numberCharacter, specialXter);
 
 }
 
