@@ -88,15 +88,15 @@ var upperCasedCharacters = [
   'Z'
 ];
 
+let passwordLength, lowerCase, upperCase, numberCharacter, specialXter;
+
 // Function to prompt user for password options
 function getPasswordOptions() {
-  let passwordLength, lowerCase, upperCase, numberCharacter, specialXter;
-
   // This section gets the User's password length
   do {
     passwordLength = prompt("Please provide the password length you want in numbers, between 8 and 128");
   }
-  while (passwordLength < 8 || passwordLength > 128 || isNaN(passwordLength) || passwordLength != null);
+  while (passwordLength < 8 || passwordLength > 128 || isNaN(passwordLength) || passwordLength == null);
 
   alert("You need to Click OK for at least one of the following options for 'Lowercase, Uppercase, Numeric or Special Characters' if you want them in your password");
 
@@ -116,11 +116,13 @@ function getPasswordOptions() {
   while (lowerCase === false && upperCase === false && numberCharacter === false && specialXter === false);
 
 
-  console.log(passwordLength, lowerCase, upperCase, numberCharacter, specialXter);
+  //console.log(passwordLength, lowerCase, upperCase, numberCharacter, specialXter);
 
 }
-
 getPasswordOptions();
+
+
+
 
 // Function for getting a random element from an array
 function getRandom(arr) {
