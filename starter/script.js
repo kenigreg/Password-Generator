@@ -163,13 +163,14 @@ function getRandom(arr) {
   
   //console.log(randomSpecialCharacter, randomNumericCharacter, randomLowerCase, randomUpperCase, passwordArray);
 }
-
 getRandom();
 
 // Function to generate password with user input
 function generatePassword() {
+   return passwordArray.join('');
 
 }
+
 
 // Get references to the #generate element
 var generateBtn = document.querySelector('#generate');
