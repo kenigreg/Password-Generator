@@ -122,12 +122,49 @@ function getPasswordOptions() {
 getPasswordOptions();
 
 
-
+let randomSpecialCharacter, randomNumericCharacter, randomLowerCase, randomUpperCase;
+let passwordArray = [];
 
 // Function for getting a random element from an array
 function getRandom(arr) {
-
+  do {
+    if (specialXter && passwordArray.length < passwordLength) {
+      randomSpecialCharacter = Math.floor(Math.random() * (specialCharacters.length));
+      if (randomSpecialCharacter) {
+        passwordArray.push(specialCharacters[randomSpecialCharacter]);
+      }
+      
+    }
+    
+    if (numberCharacter && passwordArray.length < passwordLength) {
+      randomNumericCharacter = Math.floor(Math.random() * (numericCharacters.length));
+      if (randomNumericCharacter) {
+        passwordArray.push(numericCharacters[randomNumericCharacter]);
+      }
+    }
+  
+    if (lowerCase && passwordArray.length < passwordLength) {
+      randomLowerCase = Math.floor(Math.random() * (lowerCasedCharacters.length));
+      if (randomLowerCase) {
+        passwordArray.push(lowerCasedCharacters[randomLowerCase]);
+      }
+      
+    }
+  
+    if (upperCase && passwordArray.length < passwordLength) {
+      randomUpperCase = Math.floor(Math.random() * (upperCasedCharacters.length));
+      if (randomUpperCase) {
+        passwordArray.push(upperCasedCharacters[randomUpperCase]);
+      }
+      
+    }
+  }
+  while (passwordArray.length < passwordLength);
+  
+  //console.log(randomSpecialCharacter, randomNumericCharacter, randomLowerCase, randomUpperCase, passwordArray);
 }
+
+getRandom();
 
 // Function to generate password with user input
 function generatePassword() {
