@@ -10,7 +10,7 @@ You will then be asked to confirm if you want to have lowercase, uppercase, nume
 
 Once these are confirmed, click the Generate Password button on the browser page to see the password that has been generated based on the criteria to have chosen.
 
-If you need to generate a new password, repeat the process stated above.
+If you need to generate a new password, refresh the browser and repeat the process stated above.
 
 ## Mock-Up
 The following image shows the web application's appearance and functionality:
