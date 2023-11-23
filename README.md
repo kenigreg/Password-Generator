@@ -8,7 +8,7 @@ Open the application in a browser. You will be prompted to input the length of p
 
 You will then be asked to confirm if you want to have lowercase, uppercase, numeric and/or special characters in the password you want to generate. You have to confirm at least one character type to proceed.
 
-Once these are confirmed, click the Generate Password button on the browser page to see the password that has been generated based on the criteria to have chosen.
+Once these are confirmed, click the Generate Password button on the browser page to see the password that has been generated, based on the criteria you have chosen.
 
 If you need to generate a new password, refresh the browser and repeat the process stated above.
 
